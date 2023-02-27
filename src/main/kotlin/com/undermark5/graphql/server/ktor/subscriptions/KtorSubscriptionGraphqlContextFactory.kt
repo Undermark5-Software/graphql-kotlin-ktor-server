@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Modified from the original to implement with Ktor - undermark5 2023
  */
 
 package com.undermark5.graphql.server.ktor.subscriptions
