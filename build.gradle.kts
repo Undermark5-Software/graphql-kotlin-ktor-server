@@ -45,6 +45,16 @@ java {
 }
 
 publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Undermark5-Software/graphql-kotlin-ktor-server")
+            credentials {
+                username = project.findProperty("gpr.user")?.toString() ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key")?.toString() ?: System.getenv("TOKEN")
+            }
+        }
+    }
     publications {
         create<MavenPublication>(project.name) {
             from(components["java"])
